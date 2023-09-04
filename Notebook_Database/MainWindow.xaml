@@ -1,0 +1,17 @@
+﻿<Window x:Class="Notebook_Database.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Notizbuch" Height="450" Width="800">
+
+    <Grid>
+        <Button Content="Add Note" VerticalAlignment="Top" Width="100" Height="30" Click="OnAddNote"/>
+        <ListView Name="lvNotes" VerticalAlignment="Center" Margin="10">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Title" DisplayMemberBinding="{Binding Title}" Width="120"/>
+                    <GridViewColumn Header="Content" DisplayMemberBinding="{Binding Content}" Width="500"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>
